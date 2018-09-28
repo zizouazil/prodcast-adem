@@ -1,12 +1,16 @@
 const Discord = require('discord.js');
-const fs = require('fs');
 const client = new Discord.Client();
-const moment = require("moment");
-const prefix = "-";
+ const prefix = "-";
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+	
 });
+
+client.on('message', message => {
+    if (message.content === 'zg') {
+        message.reply('pong');
+      }
 });
+
 
 client.on('ready', () => {
 client.user.setGame(` .Louis | BC  `,'https://www.twitch.tv/v5bz'); 
